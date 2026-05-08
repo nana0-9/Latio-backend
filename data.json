@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "id": "1",
+      "name": "Công nghệ",
+      "description": "Lĩnh vực công nghệ thông tin và phần mềm"
+    },
+    {
+      "id": "2",
+      "name": "Marketing",
+      "description": "Truyền thông và quảng cáo"
+    }
+  ],
+  "industries": [
+    {
+      "id": "101",
+      "fieldId": "1",
+      "name": "AI Services",
+      "description": "Dịch vụ trí tuệ nhân tạo"
+    },
+    {
+      "id": "102",
+      "fieldId": "2",
+      "name": "Digital Marketing",
+      "description": "Marketing kỹ thuật số"
+    }
+  ]
+}
