@@ -31,7 +31,7 @@ const blogSchema = new mongoose.Schema({
 const partnerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     imageUrl: { type: String, required: true },
-    sector: String 
+    sector: String
 }, { timestamps: true });
 
 const Blog = mongoose.model('Blog', blogSchema);
@@ -147,7 +147,7 @@ app.post('/api/contacts', async (req, res) => {
     try {
         const newContact = new Contact(req.body);
         await newContact.save();
-        
+
         // Log notification to console
         console.log('\x1b[36m%s\x1b[0m', `\n🚀 [NEW CONTACT] ${new Date().toLocaleString()}`);
         console.log(`👤 Khách hàng: ${newContact.name}`);
@@ -174,8 +174,8 @@ app.delete('/api/contacts/:id', async (req, res) => {
 app.patch('/api/contacts/:id', async (req, res) => {
     try {
         const updatedContact = await Contact.findByIdAndUpdate(
-            req.params.id, 
-            { status: req.body.status }, 
+            req.params.id,
+            { status: req.body.status },
             { new: true }
         );
         res.json(updatedContact);
